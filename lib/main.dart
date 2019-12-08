@@ -1,3 +1,4 @@
+import 'package:bunhann_app/restart_widget.dart';
 import 'package:bunhann_app/splash_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -7,7 +8,11 @@ Future main() async {
 
   await DotEnv().load('.env');
 
-  runApp(MyApp());
+  //runApp(MyApp());
+
+  runApp(new RestartWidget(
+      child: MyApp()
+  ));
 }
 
 class MyApp extends StatelessWidget {

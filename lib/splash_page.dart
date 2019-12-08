@@ -25,9 +25,8 @@ class SplashPage extends StatelessWidget {
       imageBackground: NetworkImage(
           DotEnv().env['SPLASH_IMAGE_URL'],
           scale: 1),
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.blueGrey[200],
       styleTextUnderTheLoader: new TextStyle(),
-      loadingText: Text('Web View',),
       photoSize: 100.0,
       loaderColor: Colors.deepOrange,
     );
