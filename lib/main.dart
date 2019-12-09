@@ -15,17 +15,31 @@ Future main() async {
   ));
 }
 
+
+const mainColor = MaterialColor(0xFF275ead, {
+  50: Color(0xFF275ead),
+  100: Color(0xFF275ead),
+  200: Color(0xFF275ead),
+  300: Color(0xFF275ead),
+  400: Color(0xFF275ead),
+  500: Color(0xFF275ead),
+  600: Color(0xFF275ead),
+  700: Color(0xFF275ead),
+  800: Color(0xFF275ead),
+  900: Color(0xFF275ead),
+});
+
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final SystemUiOverlayStyle mySystemTheme = SystemUiOverlayStyle.light
-        .copyWith(systemNavigationBarColor: Colors.deepOrange);
+        .copyWith(systemNavigationBarColor: Color(0xFF275ead));
 
     return MaterialApp(
       title: 'Bunhann Page',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.deepOrange,
+        primarySwatch: mainColor,
         primaryTextTheme: TextTheme(
           title: TextStyle(color: Colors.white),
         ),

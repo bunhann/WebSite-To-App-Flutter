@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:bunhann_app/myweb.dart';
+import 'package:bunhann_app/myweb_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_splash/flutter_splash.dart';
@@ -8,7 +9,7 @@ class SplashPage extends StatelessWidget {
 
   loadWidget() async {
     return await new Future<Widget>.delayed(
-        Duration(seconds: 3), () => MyWebPage());
+        Duration(seconds: 3), () => JobWebPage());
   }
 
   @override

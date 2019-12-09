@@ -70,6 +70,7 @@ class _MyWebPageState extends State<MyWebPage> {
             ]
           ],
         ),
+
       ),
     );
   }
@@ -83,6 +84,8 @@ class _MyWebPageState extends State<MyWebPage> {
         controllerGlobal = webViewController;
       },
       debuggingEnabled: false,
+      initialMediaPlaybackPolicy: AutoMediaPlaybackPolicy.always_allow,
+      userAgent: "Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail",
       javascriptChannels: <JavascriptChannel>[
         _toasterJavascriptChannel(context),
       ].toSet(),
@@ -98,6 +101,7 @@ class _MyWebPageState extends State<MyWebPage> {
         //print('allowing navigation to $request');
         return NavigationDecision.prevent;
       },
+
       onPageFinished: (String url) {
         print('Page finished loading: $url');
         setState(() {
